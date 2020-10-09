@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './common/touch_callback.dart';
 
 class Search extends StatefulWidget{
   @override
@@ -6,6 +7,23 @@ class Search extends StatefulWidget{
 }
 
 class SearchState extends State<Search> {
+
+  FocusNode focusNode = new FocusNode();
+
+  _requestFocus(){
+    FocusScope.of(context).requestFocus(focusNode);
+    return focusNode;
+  }
+
+  _getText(String text){
+    return TouchCallBack(
+      isfeed: false, onPressed: (){},
+      child: Text(
+        text,
+        style: TextStyle(fontSize: 14.0,color: Colors.green),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +36,25 @@ class SearchState extends State<Search> {
           children: <Widget>[
             Stack(
               children: <Widget>[
+                TouchCallBack(
+                  isfeed: false,
+                  onPressed: (){
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    height: 45.0,
+                    margin: const EdgeInsets.only(left: 12.0,right: 10.0),
+                    child: Icon(
+                      Icons.chevron_left,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+
                 Container(
                   alignment: Alignment.centerLeft,
                   height: 45.0,
-                  margin: const EdgeInsets.only(left:50.0,right:50.0),
+                  margin: const EdgeInsets.only(left:50.0,right:20.0),
                   decoration: BoxDecoration(
                     border: Border(bottom: BorderSide(width: 1.0,color:Colors.green)),
                   ),
@@ -64,18 +97,9 @@ class SearchState extends State<Search> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  Text(
-                    '小程序1',
-                    style: TextStyle(fontSize:16.0,color: Color(0xffb5b5b5)),
-                  ),
-                  Text(
-                    '小程序2',
-                    style: TextStyle(fontSize:16.0,color: Color(0xffb5b5b5)),
-                  ),
-                  Text(
-                    '小程序3',
-                    style: TextStyle(fontSize:16.0,color: Color(0xffb5b5b5)),
-                  ),
+                  _getText('朋友圈'),
+                  _getText('文章'),
+                  _getText('公众号'),
                 ],
               ),
             ),
@@ -84,18 +108,9 @@ class SearchState extends State<Search> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  Text(
-                    '小程序4',
-                    style: TextStyle(fontSize:16.0,color: Color(0xffb5b5b5)),
-                  ),
-                  Text(
-                    '小程序5',
-                    style: TextStyle(fontSize:16.0,color: Color(0xffb5b5b5)),
-                  ),
-                  Text(
-                    '小程序6',
-                    style: TextStyle(fontSize:16.0,color: Color(0xffb5b5b5)),
-                  ),
+                  _getText('小程序'),
+                  _getText('音乐'),
+                  _getText('表情'),
                 ],
               ),
             ),
