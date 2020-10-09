@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+enum ItemType { GroupChat, AddFriends, QrCode, Payments, Help }
+
 class App extends StatefulWidget{
   @override
   MainState createState() => MainState();
@@ -41,13 +43,66 @@ class MainState extends State<App> {
   //   }
   // }
 
+  _popupMenuItem(String title, { String imagePath, IconData icon }){
+    return PopupMenuItem(
+        child: Row(
+          children: <Widget> [
+            imagePath != null
+            ? Image.asset(imagePath, width:32.0, height:32.0)
+            :SizedBox(
+                width:32.0, height:32.0,
+                child:Icon(icon,color:Colors.white),
+            ),
+            Container(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Text(
+                title,
+                style: TextStyle(color: Colors.white),
+              )
+            ),
+          ]
+        ));
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      appBar: AppBar(
+        title: Text('微信'),
+        actions: <Widget> [
+          GestureDetector(
+            onTap: (){
+            },
+            child: Icon(
+              Icons.search,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 30.0, right: 20.0),
+            child:GestureDetector(
+              onTap: (){
+                showMenu(context: context,
+                    position: RelativeRect.fromLTRB(500.0, 76.0, 10.0, 0.0),
+                    items: <PopupMenuEntry>[
+                      _popupMenuItem('发起群聊', imagePath: 'images/icon_menu_group.png'),
+                      _popupMenuItem('添加朋友', imagePath: 'images/icon_menu_addfriends.png'),
+                      _popupMenuItem('扫一扫', imagePath: 'images/icon_menu_scan.png'),
+                      _popupMenuItem('收付款', imagePath: 'images/icon_menu_payment.png'),
+                      // _popupMenuItem('帮助与反馈', imagePath: 'images/icon_menu_feedback.png'),
+                      _popupMenuItem('帮助与反馈', icon:Icons.email), // 这是flutter SDK自带图标
+                    ],
+                );
+              },
+              child: Icon(Icons.add)
+            )
+          ),
+        ],
+      ),
+
       bottomNavigationBar: new BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        currentIndex: 1,
+        currentIndex: _currentIndex,
         onTap: ((index){
           setState((){
             _currentIndex = index;

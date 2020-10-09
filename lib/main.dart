@@ -16,8 +16,7 @@ void main() => runApp(MaterialApp(
       ),
       withZoom: true,
       withLocalStorage: true,
-      // "search":(BuildContext context) => new Search()
-    )
+    ),
   },
   home: new LoadingPage(),
 ));
