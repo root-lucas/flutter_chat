@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './app.dart';
 import 'loading.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+import './search.dart';
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner:false,
@@ -17,6 +18,7 @@ void main() => runApp(MaterialApp(
       withZoom: true,
       withLocalStorage: true,
     ),
+    "search":(BuildContext context) => new Search()
   },
   home: new LoadingPage(),
 ));

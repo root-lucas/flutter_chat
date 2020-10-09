@@ -73,6 +73,7 @@ class MainState extends State<App> {
         actions: <Widget> [
           GestureDetector(
             onTap: (){
+              Navigator.pushNamed(context, 'search');
             },
             child: Icon(
               Icons.search,
