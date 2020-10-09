@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './chat/message_page.dart';
 
 enum ItemType { GroupChat, AddFriends, QrCode, Payments, Help }
 
@@ -12,46 +13,46 @@ class MainState extends State<App> {
 
   var _currentIndex = 0;
 
-  // MessagePage message;
+  MessagePage message;
   // Contacts contacts;
   // Found found;
   // Personal me
 
-  // currentPage(){
-  //   switch (_currentIndex) {
-  //     case 0:
-  //       if(message == null){
-  //         message = new MessagePage();
-  //       }
-  //       return message;
-  //     case 1:
-  //       if(contacts == null){
-  //         contacts = new Contacts();
-  //       }
-  //       return contacts;
-  //     case 2:
-  //       if(found == null){
-  //         found = new Found();
-  //       }
-  //       return found;
-  //     case 3:
-  //       if(me == null){
-  //         me = new Personal();
-  //       }
-  //       return me;
-  //     default;
-  //   }
-  // }
+  currentPage(){
+    switch (_currentIndex) {
+      case 0:
+        if(message == null){
+          message = new MessagePage();
+        }
+        return message;
+      // case 1:
+      //   if(contacts == null){
+      //     contacts = new Contacts();
+      //   }
+      //   return contacts;
+      // case 2:
+      //   if(found == null){
+      //     found = new Found();
+      //   }
+      //   return found;
+      // case 3:
+      //   if(me == null){
+      //     me = new Personal();
+      //   }
+      //   return me;
+      // default;
+    }
+  }
 
   _popupMenuItem(String title, { String imagePath, IconData icon }){
     return PopupMenuItem(
         child: Row(
-          children: <Widget> [
+          children: <Widget>[
             imagePath != null
             ? Image.asset(imagePath, width:32.0, height:32.0)
             :SizedBox(
                 width:32.0, height:32.0,
-                child:Icon(icon,color:Colors.white),
+                child: Icon(icon, color: Colors.white),
             ),
             Container(
               padding: const EdgeInsets.only(left: 20.0),
@@ -152,6 +153,7 @@ class MainState extends State<App> {
           ),
         ],
       ),
+      body:currentPage(),
     );
   }
 }
