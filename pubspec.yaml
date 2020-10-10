@@ -44,6 +44,7 @@ flutter:
   uses-material-design: true
   assets:
     - images/loading.png
+
     # 4个底部切换图片
     - images/tabbar_chat.png
     - images/tabbar_chat_hl.png
@@ -61,6 +62,11 @@ flutter:
     - images/icon_menu_scan.png
     - images/icon_menu_payment.png
     - images/icon_menu_feedback.png
+
+    #通讯录图标
+    - images/icon_addfriend.png
+    - images/icon_groupchat.png
+    - images/icon_public.png
 
 
   # To add assets to your application, add an assets section, like this:

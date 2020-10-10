@@ -91,7 +91,7 @@ List<MessageData> messageData = [
   new MessageData(
     'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1602264362174&di=6bbdce5fd97185924f54ad729d3b5dec&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20180613%2F1bfa6f240eb4492ca4562612ee2879d4.jpeg',
     '多弗朗明哥',
-    '只有最后的胜利者才能定义“正义”，所以认为“正义必胜”',
+    '正义会胜?那是当然的，只有胜者，才是正义!',
     new DateTime.now(),
     MessageType.CHAT,
   ),
