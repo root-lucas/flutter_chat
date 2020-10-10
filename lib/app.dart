@@ -89,10 +89,10 @@ class MainState extends State<App> {
                 showMenu(context: context,
                     position: RelativeRect.fromLTRB(500.0, 76.0, 10.0, 0.0),
                     items: <PopupMenuEntry>[
-                      _popupMenuItem('发起群聊', imagePath: 'images/icon_menu_group.png'),
-                      _popupMenuItem('添加朋友', imagePath: 'images/icon_menu_addfriends.png'),
-                      _popupMenuItem('扫一扫', imagePath: 'images/icon_menu_scan.png'),
-                      _popupMenuItem('收付款', imagePath: 'images/icon_menu_payment.png'),
+                      _popupMenuItem('发起群聊', imagePath: 'images/top_popupMenuItem/icon_menu_group.png'),
+                      _popupMenuItem('添加朋友', imagePath: 'images/top_popupMenuItem/icon_menu_addfriends.png'),
+                      _popupMenuItem('扫一扫', imagePath: 'images/top_popupMenuItem/icon_menu_scan.png'),
+                      _popupMenuItem('收付款', imagePath: 'images/top_popupMenuItem/icon_menu_payment.png'),
                       // _popupMenuItem('帮助与反馈', imagePath: 'images/icon_menu_feedback.png'),
                       _popupMenuItem('帮助与反馈', icon:Icons.email), // 这是flutter SDK自带图标
                     ],
@@ -120,8 +120,8 @@ class MainState extends State<App> {
                 color: _currentIndex == 0 ? Color(0xFF46c01b):Color(0xff999999)),
             ),
             icon:_currentIndex == 0
-                  ? Image.asset('images/tabbar_chat_hl.png',width:32.0,height:28.0)
-                  : Image.asset('images/tabbar_chat.png',width:32.0,height:28.0),
+                  ? Image.asset('images/tabbar/tabbar_chat_hl.png',width:32.0,height:28.0)
+                  : Image.asset('images/tabbar/tabbar_chat.png',width:32.0,height:28.0),
           ),
           new BottomNavigationBarItem(
             title: new Text(
@@ -130,8 +130,8 @@ class MainState extends State<App> {
                   color: _currentIndex == 1 ? Color(0xFF46c01b):Color(0xff999999)),
             ),
             icon:_currentIndex == 1
-                ? Image.asset('images/tabbar_friends_hl.png',width:32.0,height:28.0)
-                : Image.asset('images/tabbar_friends.png',width:32.0,height:28.0),
+                ? Image.asset('images/tabbar/tabbar_friends_hl.png',width:32.0,height:28.0)
+                : Image.asset('images/tabbar/tabbar_friends.png',width:32.0,height:28.0),
           ),
           new BottomNavigationBarItem(
             title: new Text(
@@ -140,8 +140,8 @@ class MainState extends State<App> {
                   color: _currentIndex == 2 ? Color(0xFF46c01b):Color(0xff999999)),
             ),
             icon:_currentIndex == 2
-                ? Image.asset('images/tabbar_discover_hl.png',width:32.0,height:28.0)
-                : Image.asset('images/tabbar_discover.png',width:32.0,height:28.0),
+                ? Image.asset('images/tabbar/tabbar_discover_hl.png',width:32.0,height:28.0)
+                : Image.asset('images/tabbar/tabbar_discover.png',width:32.0,height:28.0),
           ),
           new BottomNavigationBarItem(
             title: new Text(
@@ -150,8 +150,8 @@ class MainState extends State<App> {
                   color: _currentIndex == 3 ? Color(0xFF46c01b):Color(0xff999999)),
             ),
             icon:_currentIndex == 3
-                ? Image.asset('images/tabbar_mine_hl.png',width:32.0,height:28.0)
-                : Image.asset('images/tabbar_mine.png',width:32.0,height:28.0),
+                ? Image.asset('images/tabbar/tabbar_mine_hl.png',width:32.0,height:28.0)
+                : Image.asset('images/tabbar/tabbar_mine.png',width:32.0,height:28.0),
           ),
         ],
       ),

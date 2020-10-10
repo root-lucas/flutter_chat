@@ -19,7 +19,7 @@ class Personal extends StatelessWidget {
                   Container(
                     margin: const EdgeInsets.only(left: 12.0, right: 15.0),
                     child: Image.asset(
-                      'images/king.png',
+                      'images/personal/isMe.png',
                       width: 70.0,
                       height: 70.0,
                     ),
@@ -49,7 +49,7 @@ class Personal extends StatelessWidget {
                   Container(
                     margin: const EdgeInsets.only(left: 12.0, right: 15.0),
                     child: Image.asset(
-                      'images/code.png',
+                      'images/personal/code.png',
                       width: 24.0,
                       height: 24.0,
                     ),
@@ -63,7 +63,7 @@ class Personal extends StatelessWidget {
             color: Colors.white,
             child: WechatItem(
               title: '钱包',
-              imagePath: 'images/icon_me_money.png',
+              imagePath: 'images/personal/icon_me_money.png',
             ),
           ),
           Container(
@@ -72,7 +72,7 @@ class Personal extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 WechatItem(
-                  imagePath: 'images/icon_me_collect.png',
+                  imagePath: 'images/personal/icon_me_collect.png',
                   title: '收藏',
                 ),
                 Padding(
@@ -83,7 +83,7 @@ class Personal extends StatelessWidget {
                   ),
                 ),
                 WechatItem(
-                  imagePath: 'images/icon_me_photo.png',
+                  imagePath: 'images/personal/icon_me_photo.png',
                   title: '相册',
                 ),
                 Padding(
@@ -94,7 +94,7 @@ class Personal extends StatelessWidget {
                   ),
                 ),
                 WechatItem(
-                  imagePath: 'images/icon_me_card.png',
+                  imagePath: 'images/personal/icon_me_card.png',
                   title: '卡包',
                 ),
                 Padding(
@@ -105,7 +105,7 @@ class Personal extends StatelessWidget {
                   ),
                 ),
                 WechatItem(
-                  imagePath: 'images/icon_me_smile.png',
+                  imagePath: 'images/personal/icon_me_smile.png',
                   title: '表情',
                 ),
               ],
@@ -116,7 +116,7 @@ class Personal extends StatelessWidget {
             color: Colors.white,
             child: WechatItem(
               title: '设置',
-              imagePath: 'images/icon_me_setting.png',
+              imagePath: 'images/personal/icon_me_setting.png',
             ),
           ),
         ],
