@@ -68,6 +68,18 @@ flutter:
     - images/icon_groupchat.png
     - images/icon_public.png
 
+    #发现模块图标
+    - images/icon_friends.png
+    - images/icon_scan.png
+    - images/icon_shake.png
+    - images/icon_look.png
+    - images/icon_search.png
+    - images/icon_near.png
+    - images/icon_bottle.png
+    - images/icon_shop.png
+    - images/icon_game.png
+    - images/icon_link.png
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:

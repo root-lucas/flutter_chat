@@ -11,7 +11,7 @@ void main() => runApp(MaterialApp(
   routes:<String,WidgetBuilder>{
     "app":(BuildContext context) => new App(),
     "/friends":(_) => new WebviewScaffold(
-        url: "https://weixn.qq.com",
+        url: "https://weixin.qq.com",
         appBar: new AppBar(
           title: new Text("微信朋友圈"),
       ),
