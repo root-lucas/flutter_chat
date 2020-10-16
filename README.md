@@ -1,6 +1,20 @@
 # wechat
 
-A new Flutter application.
+A Flutter wechat application.
+
+## Usage
+
+```sh
+flutter packages get
+flutter run
+```
+
+## testing environment
+
+```sh
+Dart 2.10.0
+FlutterSDK 1.22.0 	# stable 版
+```
 
 ## Getting Started
 
